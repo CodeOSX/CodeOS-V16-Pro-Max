@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, black, purple);
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro {
+  font-size: 2em;
+  animation: fadeOut 3s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+#home {
+  text-align: center;
+}
+
+.dock {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 50px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.2) rotate(5deg);
+}
