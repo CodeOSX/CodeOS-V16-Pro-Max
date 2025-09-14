@@ -37,3 +37,10 @@ document.querySelectorAll('.icon').forEach(icon => {
     }
   });
 });
+// Calculator functionality
+document.getElementById('calculator').addEventListener('click', () => {
+  let num1 = prompt("Enter first number:");
+  let num2 = prompt("Enter second number:");
+  let sum = Number(num1) + Number(num2);
+  alert(`Result: ${sum}`);
+});
