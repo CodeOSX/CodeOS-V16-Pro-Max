@@ -34,3 +34,5 @@
   <img src="carGame.png" class="icon" id="carGame" alt="Car Game">
   <img src="chatGPT.png" class="icon" id="chatGPT" alt="ChatGPT">
 </div>
+<!-- Car Game Canvas -->
+<canvas id="carGameCanvas" width="400" height="600" style="display:none; border:1px solid #000;"></canvas>
