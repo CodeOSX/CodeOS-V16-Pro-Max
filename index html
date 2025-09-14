@@ -49,3 +49,17 @@
 <!-- Link your script at the very bottom -->
 <script src="script.js"></script>
 </body>
+<!-- Home Screen Icons -->
+<div id="home">
+  <img src="calculator.png" class="icon" id="calculator" alt="Calculator">
+  <img src="wallpaper.png" class="icon" id="wallpaper" alt="Wallpaper">
+  <img src="carGame.png" class="icon" id="carGame" alt="Car Game">
+  <img src="chatGPT.png" class="icon" id="chatGPT" alt="ChatGPT">
+</div>
+
+<!-- Car Game Canvas -->
+<canvas id="carGameCanvas" width="400" height="600" style="display:none; border:1px solid #000;"></canvas>
+
+<!-- Link your script at the very bottom -->
+<script src="script.js"></script>
+</body>
