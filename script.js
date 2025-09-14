@@ -44,3 +44,29 @@ document.getElementById('calculator').addEventListener('click', () => {
   let sum = Number(num1) + Number(num2);
   alert(`Result: ${sum}`);
 });
+document.addEventListener("DOMContentLoaded", () => {
+  // Calculator
+  document.getElementById('calculator').addEventListener('click', () => {
+    let num1 = prompt("Enter first number:");
+    let num2 = prompt("Enter second number:");
+    let sum = Number(num1) + Number(num2);
+    alert(`Result: ${sum}`);
+  });
+
+  // Wallpaper
+  document.getElementById('wallpaper').addEventListener('click', () => {
+    let color1 = prompt("Enter top color (e.g., black):");
+    let color2 = prompt("Enter bottom color (e.g., purple):");
+    document.body.style.background = `linear-gradient(${color1}, ${color2})`;
+  });
+
+  // Car Game
+  document.getElementById('carGame').addEventListener('click', () => {
+    alert("Car Game coming soon! 🚗");
+  });
+
+  // ChatGPT
+  document.getElementById('chatGPT').addEventListener('click', () => {
+    alert("ChatGPT coming soon! 🤖");
+  });
+});
