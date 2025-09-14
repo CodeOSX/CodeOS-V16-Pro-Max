@@ -63,3 +63,49 @@
 <!-- Link your script at the very bottom -->
 <script src="script.js"></script>
 </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeOS V16 Ultra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Intro Screen -->
+  <div id="intro">
+    <h1>CodeOS V16 Ultra</h1>
+  </div>
+
+  <!-- Home Screen -->
+  <div id="home">
+    <img src="calculator.png" class="icon" id="calculator" alt="Calculator">
+    <img src="wallpaper.png" class="icon" id="wallpaper" alt="Wallpaper">
+    <img src="carGame.png" class="icon" id="carGame" alt="Car Game">
+    <img src="chatGPT.png" class="icon" id="chatGPT" alt="ChatGPT">
+  </div>
+
+  <!-- Dock -->
+  <div id="dock">
+    <img src="calculator.png" class="dock-icon" id="dockCalculator">
+    <img src="wallpaper.png" class="dock-icon" id="dockWallpaper">
+    <img src="carGame.png" class="dock-icon" id="dockCarGame">
+    <img src="chatGPT.png" class="dock-icon" id="dockChatGPT">
+  </div>
+
+  <!-- Car Game Canvas -->
+  <canvas id="carGameCanvas" width="400" height="600" style="display:none;"></canvas>
+
+  <!-- Control Center -->
+  <div id="controlCenter">
+    <button id="closeControl">X</button>
+    <div class="bar" id="volumeBar"></div>
+    <div class="bar" id="brightnessBar"></div>
+    <div id="lowPower">Low Power: OFF</div>
+  </div>
+
+  <!-- Clock -->
+  <div id="clock"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
