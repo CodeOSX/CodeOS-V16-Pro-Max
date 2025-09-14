@@ -70,3 +70,63 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("ChatGPT coming soon! 🤖");
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  // Update time (New York)
+  function updateTime() {
+    let now = new Date();
+    let nyTime = now.toLocaleTimeString("en-US", {timeZone: "America/New_York", hour12: true, hour: '2-digit', minute:'2-digit'});
+    document.getElementById("time").innerText = nyTime;
+  }
+  setInterval(updateTime, 1000);
+
+  // Toggle Control Center
+  const controlBtn = document.getElementById("controlBtn");
+  const controlCenter = document.getElementById("controlCenter");
+  const closeControl = document.getElementById("closeControl");
+
+  controlBtn.addEventListener("click", () => {
+    controlCenter.style.display = controlCenter.style.display === "none" ? "block" : "none";
+  });
+
+  closeControl.addEventListener("click", () => {
+    controlCenter.style.display = "none";
+  });
+
+  // Low Power Mode
+  const lowPower = document.querySelector("#controlCenter input[type='checkbox']");
+  lowPower.addEventListener("change", () => {
+    document.body.style.filter = lowPower.checked ? "brightness(0.6)" : "brightness(1)";
+  });
+
+  // Volume slider (dummy effect)
+  const volumeSlider = document.querySelector("#controlCenter input[type='range']");
+  volumeSlider.addEventListener("input", () => {
+    console.log("Volume set to: " + volumeSlider.value);
+  });
+
+  // Clickable apps
+  const apps = document.querySelectorAll('.icon');
+  apps.forEach(icon => {
+    icon.addEventListener('click', () => {
+      switch(icon.id){
+        case 'calculator':
+          let num1 = prompt("Enter first number:");
+          let num2 = prompt("Enter second number:");
+          let sum = Number(num1) + Number(num2);
+          alert(`Result: ${sum}`);
+          break;
+        case 'wallpaper':
+          let color1 = prompt("Enter top color (e.g., black):");
+          let color2 = prompt("Enter bottom color (e.g., purple):");
+          document.body.style.background = `linear-gradient(${color1}, ${color2})`;
+          break;
+        case 'carGame':
+          alert("Car Game coming soon! 🚗");
+          break;
+        case 'chatGPT':
+          alert("ChatGPT coming soon! 🤖");
+          break;
+      }
+    });
+  });
+});
