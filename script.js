@@ -223,3 +223,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+let obstacles = [];
+let score = 0;
+
+function createObstacle() {
+  const width = Math.random() * 100 + 30;
+  const x = Math.random() * (carGameCanvas.width - width);
+  obstacles.push({ x: x, y: -20, width: width, height: 20 });
+}
+
+window.gameInterval = setInterval(() => {
+  // Move obstacles
+  for(let i = 0; i < obstacles.length; i++) {
+    obstacles[i].y += 3;
+    ctx.fillStyle = 'red';
+    ctx.fillRect(obstacles[i].x, obstacles[i].y, obstacles[i].width, obstacles[i].height);
+
+    // Collision
+    if(carY < obstacles[i].y + obstacles[i].height &&
+       carY + carHeight > obstacles[i].y &&
+       carX < obstacles[i].x + obstacles[i].width &&
+       carX + carWidth > obstacles[i].x) {
+      alert("Game Over! Score: " + score);
+      clearInterval(window.gameInterval);
+      carGameCanvas.style.display = 'none';
+    }
+
+    // Remove off-screen obstacles
+    if(obstacles[i].y > carGameCanvas.height) {
+      obstacles.splice(i, 1);
+      i--;
+      score++;
+    }
+  }
+
+  // Randomly spawn obstacles
+  if(Math.random() < 0.02) createObstacle();
+
+  // Move car based on keys (already in your code)
+  if(keys['ArrowLeft'] && carX > 0) carX -= speed;
+  if(keys['ArrowRight'] && carX < carGameCanvas.width - carWidth) carX += speed;
+
+  // Draw car
+  ctx.fillStyle = 'purple';
+  ctx.fillRect(carX, carY, carWidth, carHeight);
+
+  // Draw background
+  ctx.fillStyle = '#111';
+  ctx.fillRect(0, 0, carGameCanvas.width, carGameCanvas.height);
+
+}, 20);
