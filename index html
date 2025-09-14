@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeOS V16 Ultra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Intro Screen -->
+  <div id="intro">
+    <h1>⚡ CodeOS V16 Ultra ⚡</h1>
+  </div>
+
+  <!-- Home Screen -->
+  <div id="home" style="display:none;">
+    <div class="dock">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="App Store" class="icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_logo.svg" alt="Windows" class="icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/YouTube_logo_%282013-2017%29.png" alt="YouTube" class="icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo-GoogleChrome.png" alt="Chrome" class="icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="icon">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
