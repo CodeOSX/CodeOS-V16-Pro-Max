@@ -17,4 +17,23 @@ if(lightning){
     lightning.style.background = "white";
     setTimeout(() => { lightning.style.background = "transparent"; }, 100);
   }, 500);
-}
+
+// Clickable apps
+document.querySelectorAll('.icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    switch(icon.id){
+      case 'calculator':
+        alert('Opening Calculator...');
+        break;
+      case 'wallpaper':
+        alert('Opening Wallpaper App...');
+        break;
+      case 'carGame':
+        alert('Opening Car Game...');
+        break;
+      case 'chatGPT':
+        alert('Opening ChatGPT...');
+        break;
+    }
+  });
+});
