@@ -86,3 +86,21 @@ body {
   background: #111;
   border-radius: 15px;
 }
+#carGameCanvas {
+  display: none;
+  margin: 20px auto;
+  background: #111;
+  border-radius: 15px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s; /* hover effect */
+}
+
+.icon:hover {
+  transform: scale(1.1); /* slightly enlarge on hover */
+}
