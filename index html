@@ -27,3 +27,10 @@
 </body>
 </html>
 <script src="script.js"></script>
+<!-- Home screen apps -->
+<div id="home">
+  <img src="calculator.png" class="icon" id="calculator" alt="Calculator">
+  <img src="wallpaper.png" class="icon" id="wallpaper" alt="Wallpaper">
+  <img src="carGame.png" class="icon" id="carGame" alt="Car Game">
+  <img src="chatGPT.png" class="icon" id="chatGPT" alt="ChatGPT">
+</div>
