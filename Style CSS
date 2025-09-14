@@ -41,3 +41,42 @@ body {
 .icon:hover {
   transform: scale(1.2) rotate(5deg);
 }
+#statusBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+#controlCenter {
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  width: 200px;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1001;
+}
+
+#controlCenter button {
+  float: right;
+  cursor: pointer;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.controlItem {
+  margin: 10px 0;
+}
