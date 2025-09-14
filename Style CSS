@@ -80,3 +80,9 @@ body {
 .controlItem {
   margin: 10px 0;
 }
+#carGameCanvas {
+  display: none; /* show only when game opens */
+  margin: 20px auto;
+  background: #111;
+  border-radius: 15px;
+}
